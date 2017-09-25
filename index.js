@@ -8,7 +8,7 @@ var Agendash = require('agendash');
 
 const TITLE = process.env.TITLE || 'Agendash';
 var app = express();
-var agenda = new Agenda({db: {address: process.env.MONGODB_URI}});
+var agenda = new Agenda({db: {address: process.env.MONGO_URI}});
 
 app.use(basicAuth(process.env.USER_NAME || 'admin', process.env.PASSWORD));
 app.use('/', Agendash(agenda, {middleware: 'express', title: TITLE}));
