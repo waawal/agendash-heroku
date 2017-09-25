@@ -1,0 +1,55 @@
+{
+    "name": "agendash",
+    "description": "Set up a Agendash instance on Heroku with ease",
+    "keywords": [
+      "queuing",
+      "agenda",
+      "queue",
+      "scheduler",
+      "dashboard",
+      "node",
+      "agendash",
+      "UI",
+      "GUI"
+    ],
+    "website": "https://github.com/waawal/agendash-heroku/",
+    "repository": "https://github.com/waawal/agendash-heroku/",
+    "logo": "https://cdn.rawgit.com/agenda/agenda/master/agenda.svg",
+    "success_url": "/",
+    "env": {
+      "USER_NAME": {
+        "description": "The username for the web interface.",
+        "value": "admin"
+      },
+      "PASSWORD": {
+        "description": "The password for the web interface.",
+        "generator": "secret"
+      },
+      "TITLE": {
+        "description": "Title shown in the UI",
+        "value": "Agendash",
+        "required": false
+      }
+    },
+    "formation": {
+      "web": {
+        "quantity": 1,
+        "size": "free"
+      }
+    },
+    "image": "heroku/nodejs",
+    "addons": [
+      {
+        "plan": "mongolab:sandbox",
+        "as": "MONGO"
+      },
+      {
+        "plan": "papertrail:choklad"
+      }
+    ],
+    "buildpacks": [
+      {
+        "url": "heroku/nodejs"
+      }
+    ]
+  }
