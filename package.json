@@ -1,0 +1,33 @@
+{
+  "name": "agendash-heroku",
+  "version": "1.0.0",
+  "description": "app.json for installing a agendash instance to Heroku",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waawal/agendash-heroku.git"
+  },
+  "keywords": [
+    "agenda",
+    "agendash",
+    "heroku",
+    "queue",
+    "dashboard",
+    "ui"
+  ],
+  "author": "Daniel Waardal <daniel@massforstroel.se>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/waawal/agendash-heroku/issues"
+  },
+  "homepage": "https://github.com/waawal/agendash-heroku#readme",
+  "dependencies": {
+    "agenda": "^1.0.0",
+    "agendash": "^0.4.0",
+    "basic-auth-connect": "^1.0.0",
+    "express": "^4.15.5"
+  }
+}
